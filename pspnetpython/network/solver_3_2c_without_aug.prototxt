@@ -1,0 +1,25 @@
+#train_net: "/home/hmelo/fcnd/nyud-fcn32s-color-d/trainval.prototxt"
+train_net: "/home/conteinerFiles/pspnet/pspnetpython/network/trainval.prototxt"
+#test_net: "/home/hmelo/fcnd/nyud-fcn32s-color-d/test.prototxt"
+test_net: "/home/conteinerFiles/pspnet/pspnetpython/network/test.prototxt"
+test_iter: 518
+#test_iter: 1
+# make test net, but don't invoke it from the solver itself
+test_interval: 9000000
+display: 20
+average_loss: 20
+lr_policy: "fixed"
+# lr for unnormalized softmax
+base_lr: 1e-10
+# high momentum
+momentum: 0.99
+# no gradient accumulation
+iter_size: 1
+max_iter: 100000
+#max_iter: 2000
+weight_decay: 0.0005
+snapshot: 100000
+#snapshot: 2000
+#snapshot_prefix: "/home/conteinerFiles/pspnet/pspnetpython/network/snapshot_4/train"
+snapshot_prefix: "/home/conteinerFiles/pspnet/pspnetpython/network/snapshot_3_2c_without_aug/train"
+test_initialization: false
